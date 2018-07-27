@@ -1,31 +1,31 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <h1 v-if="['task', 'login'].indexOf($route.name) > -1">Kanban App</h1>
+    <div id="nav" v-if="['task'].indexOf($route.name) > -1">
+      
+      <h1>Kanban App</h1>
       <router-link to="/">Home</router-link> |
       <router-link to="/task">Task</router-link> |
-      <router-link to="/login" v-if="token === null || token === undefined || token === ''">Login</router-link>
-      <router-link to="" v-else>Logout</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   data: function () {
       return {
-        token: ''
+        tasks: []
       }
   },
   methods: {
-      getToken: function () {
-          this.token = localStorage.getItem('token')
-      }
+    ...mapActions([
+        'getTask'
+      ])
   },
-  created: function () {
-      // this.getToken()
-      // console.log(this.token)
+  created () {
+    this.getTask()
   }
 }
 </script>

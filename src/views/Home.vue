@@ -1,24 +1,24 @@
 <template>
   <div class="home">
-    <img src="../assets/k-logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <div class="row">
+      <img src="../assets/k-logo.png">
+    </div>
+    <div class="row">
+      <v-btn to="/task" outline color="light-blue darken-1">LET'S GET STARTED</v-btn>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+  name: 'home'
 }
 </script>
 
 <style>
 img {
-    width: 50%;
+    margin-top: 100px;
+    width: 35%;
 }
 </style>
