@@ -4,7 +4,7 @@
       
       <h1>Kanban App</h1>
       <router-link to="/">Home</router-link> |
-      <router-link to="/task">Task</router-link> |
+      <router-link to="/task">Task</router-link>
     </div>
     <router-view/>
   </div>

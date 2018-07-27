@@ -1,12 +1,12 @@
 import firebase from 'firebase'
 
 var config = {
-  apiKey: "AIzaSyDtFzQ-bKSoXr3Q83gEnG4LltmIN_3S9o0",
-  authDomain: "kanban-f7cde.firebaseapp.com",
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
   databaseURL: "https://kanban-f7cde.firebaseio.com",
-  projectId: "kanban-f7cde",
-  storageBucket: "kanban-f7cde.appspot.com",
-  messagingSenderId: "720382169185"
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId
 }
 
 firebase.initializeApp(config)

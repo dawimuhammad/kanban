@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md text-xs-center>
-    <v-btn v-on:click="inputTask">Add New</v-btn>
-    <v-layout row wrap>
+    <v-btn outline round v-on:click="inputTask">Add New Tasks</v-btn>
+    <v-layout row wrap mt-4>
         <TaskBacklog></TaskBacklog>
         <TaskTodo></TaskTodo>
         <TaskDoing></TaskDoing>

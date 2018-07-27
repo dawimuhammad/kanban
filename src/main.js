@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 import Vuetify from 'vuetify'
 import firebase from 'firebase/app'
+require('dotenv').config();
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
