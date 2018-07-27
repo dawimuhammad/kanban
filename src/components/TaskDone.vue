@@ -26,12 +26,26 @@
 
 <script>
   import { mapState } from 'vuex'
+  import { mapActions } from 'vuex'
 
-  export default {
-    computed: {
-      ...mapState([
-        'task'
-      ])
+export default {
+  methods: {
+    ...mapActions([
+      'updateTaskStatus'
+    ]),
+    updateTask: function(taskId, status) {
+        let payload = {
+          taskId: taskId,
+          statusChange: status
+        }
+
+        this.updateTaskStatus(payload)
     }
+  },
+  computed: {
+    ...mapState([
+      'task'
+    ])
   }
+}
 </script>
